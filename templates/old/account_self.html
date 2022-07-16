@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Left Food</title>
+</head>
+
+<body>
+帳號管理
+
+身分：{{ role }}
+
+<form method="post", action="account_revise">
+    
+    {{ text_content | safe }}
+
+    <button type="submit" onclick="check()">更新</button>
+</form>
+<button onclick ="location.href = 'home';" >回首頁</button>
+
+<script>
+    function check() {
+      alert("資料已更改");
+    }
+</script>
+
+</body>
+</html>

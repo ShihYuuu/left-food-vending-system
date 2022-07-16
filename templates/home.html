@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Left Food 帳號登入</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/themify-icons/css/themify-icons.css') }}">
+    <!-- <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css"> -->
+
+    <!-- Bootstrap + Rubic main styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rubic.css') }}">
+	<!-- <link rel="stylesheet" href="assets/css/rubic.css"> -->
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav id="scrollspy" class="navbar page-navbar navbar-dark navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong class="text-primary">Left</strong><span class="text-light">Food</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="index.html">帳號登入</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pricing">管理員</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="enroll">申辦帳號</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="header d-flex justify-content-center">
+        <div class="container">
+            <div class="row h-100 align-items-center">
+                <div class="col-md-7">
+                    <div class="header-content">
+                        <h3 class="header-title"><strong class="text-primary">Left Food</strong><span></span></h3>
+                        <h4 class="header-subtitle">新 即食食品媒合平台</h4>
+                        <p>為了讓餐廳每日剩餘的食物不被浪費，且能以合理優惠的價格銷售給需要的客戶，而設立此平台！</p>
+                    </div>  
+                </div>
+                <div class="col-md-5 d-none d-md-block">
+                    <form class="header-form" method="post" action="/home">
+                        <div class="head"><span class="text-primary">賣家/買家</span>登入</div>
+                        
+                        <div class="body">
+                            <div class="form-group">
+                                <input type="text" id="account" name="account" class="form-control" placeholder="帳號*">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" id="password" name="password" class="form-control" placeholder="密碼*">
+                            </div>
+                            {{ alert | safe }}
+                        </div>
+                        <div class="footer">
+                            <button class="btn btn-primary btn-block" type="submit">登入</button>
+                        </div>
+                    </form> 
+                </div>
+            </div>  
+        </div>
+    </header>
+</body>
+</html>

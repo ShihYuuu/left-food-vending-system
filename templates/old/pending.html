@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Left Food</title>
+
+  <style>
+    table, th, td {
+      border: 1px solid rgb(211, 27, 187);
+      border-collapse: collapse;
+    }
+    </style>
+    
+</head>
+
+<body>
+待審名單
+
+<table style="width:100%">
+    <thead>
+          <th>Pending List</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td> 帳號 </td>
+            <td> 名稱 </td>
+            <td> 電話 </td>
+            <td> 身分 </td>
+            <td> 審核 </td>
+
+        </tr>
+        {{ table_content | safe }}
+       
+   </tbody>
+</table>
+
+<button onclick ="location.href = 'home';" >回首頁</button>
+</body>
+</html>

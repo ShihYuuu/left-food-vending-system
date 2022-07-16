@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Left Food</title>
+</head>
+
+<body>
+  <h1>剩食系統</h1>
+  <form method="post" action="/home">
+
+    <label for="user">account:</label>
+      <input type="text" id="account" name="account">
+
+    <label for="password">password:</label>
+      <input type="password" id="password" name="password">
+
+      <button type="submit">登入</button>
+  </form>
+  {{ alert | safe }}
+  <button onclick ="location.href = 'enroll';" >註冊</button>
+  
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Left Food</title>
+
+  <style>
+    table, th, td {
+      border: 1px solid rgb(211, 27, 187);
+      border-collapse: collapse;
+    }
+  </style>
+    
+</head>
+
+<body>
+剩食資料
+日期: {{ date }}
+<table style="width:100%">
+    <tr>
+        <td>品項</td>
+        <td>金額</td>
+        <td>數量</td>
+    </tr>
+
+    {{ table_content | safe }}
+
+</table>
+
+
+<button onclick ="location.href = 'home';" >回首頁</button>
+<button onclick ="location.href = 'food_add';" >新增</button>
+<button onclick ="location.href = 'food_delete';" >刪除</button>
+</body>
+</html>

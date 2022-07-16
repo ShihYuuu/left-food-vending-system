@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Left Food</title>
+</head>
+
+<body>
+  <h1>新增</h1>
+  {{ warning | safe }}
+  <form method="post" action="/food_add_info">
+
+    <label for="food">品項:</label>
+      <input type="text" id="food" name="food">
+    
+    <label for="quantity">數量:</label>
+      <input type="text" id="quantity" name="quantity">
+    
+    <label for="price">金額:</label>
+      <input type="text" id="price" name="price">
+
+    <label for="discount">折扣:</label>
+      <input type="text" id="discount" name="discount">
+
+      <button type="submit">新增</button>
+  </form>
+  <button onclick ="location.href = 'food_data';" >取消</button>
+</body>
+</html>

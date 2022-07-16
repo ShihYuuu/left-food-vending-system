@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Left Food</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/themify-icons/css/themify-icons.css') }}">
+    <!-- <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css"> -->
+
+    <!-- Bootstrap + Rubic main styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rubic.css') }}">
+	<!-- <link rel="stylesheet" href="assets/css/rubic.css"> -->
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav id="scrollspy" class="navbar page-navbar navbar-dark navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong class="text-primary">Left</strong><span class="text-light">Food</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="index.html">帳號登入</a>
+                    </li> -->
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#pricing">管理員</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="home">回首頁</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="header d-flex justify-content-center">
+      <div class="container text-center">
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <h1 class="display-4 has-line">剩食資料</h1>
+          <div id="current_date"></p>
+            {{ date }}
+            <br/>
+            <br/>
+            <br/>
+
+            <table style="width: 100%;" border="2" cellpadding="5">
+            <tbody>
+            <tr>
+            <td>&nbsp;品項</td>
+            <td>&nbsp;金額</td>
+            <td>&nbsp;數量</td>
+            </tr>
+            
+            {{ table_content | safe }}
+
+            </tbody>
+        </table>
+        <br>
+        <button class="btn btn-primary rounded" onclick ="location.href = 'food_add';" ><i class="ti-plus"></i>新增</button>
+        &nbsp;
+        <button class="btn btn-primary rounded" onclick ="location.href = 'food_delete';" ><i class="ti-minus"></i>刪除</button>
+
+      </div>
+    </header>
+</body>
+</html>

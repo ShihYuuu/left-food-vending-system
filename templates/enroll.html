@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Left Food</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/themify-icons/css/themify-icons.css') }}">
+    <!-- <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css"> -->
+
+    <!-- Bootstrap + Rubic main styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rubic.css') }}">
+	<!-- <link rel="stylesheet" href="assets/css/rubic.css"> -->
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav id="scrollspy" class="navbar page-navbar navbar-dark navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong class="text-primary">Left</strong><span class="text-light">Food</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">取消</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="header d-flex justify-content-center">
+      <div class="container text-center">
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <h1 class="display-4 has-line">帳號註冊</h1>
+          <div id="current_date"></p>
+            <br/>
+            <br/>
+            <br/>
+
+            <form method="post", action="/enroll_info">
+                <div>
+                    <select name="role" class="select custom-select">
+                        <option value="buyer">買家</option>
+                        <option value="seller">賣家</option>
+                    </select>
+                </div>
+                <br>
+                <div class="form-group">
+                    名稱：<input class="form-control" type="text" name="name">
+                </div>
+                <div class="form-group">
+                    電話：<input class="form-control" type="text" name="phone">
+                </div>
+                <div class="form-group">
+                    帳號：<input class="form-control" type="text" name="account">
+                </div>
+                <div class="form-group">
+                    密碼：<input class="form-control" type="text" name="password">
+                </div>
+                
+                <button class="btn btn-primary rounded" type="submit" onclick="check()">確認</button>
+            </form>
+            <script>
+                function check() {
+                  alert("等待管理員審核帳號!");
+                }
+            </script>
+      </div>
+    </header>
+</body>
+</html>

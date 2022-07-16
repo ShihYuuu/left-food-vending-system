@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Left Food</title>
+</head>
+
+<body>
+  <h1>帳號註冊</h1>
+
+  <form method="post" action="/enroll_info">
+    <p>
+        <input type="checkbox" id="buyer" name="role" value="buyer">
+        <label for="cbox1">買家</label>
+        
+        <input type="checkbox" id="seller" name="role" value="seller">
+        <label for="cbox1">賣家</label>
+    </p>
+
+    <label for="name">名稱:</label>
+      <input type="text" id="name" name="name">
+
+    <label for="phone">電話:</label>
+      <input type="text" id="phone" name="phone">
+    
+    <label for="account">帳號:</label>  
+      <input type="text" id="account" name="account">
+
+    <label for="password">密碼:</label>
+      <input type="text" id="password" name="password">
+
+      <button type="submit" onclick="check()">確認</button>
+  </form>
+  
+  <script>
+    function check() {
+      alert("等待管理員審核帳號!");
+    }
+  </script>
+  
+</body>
+</html>

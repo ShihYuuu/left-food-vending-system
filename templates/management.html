@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Left Food</title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendors/themify-icons/css/themify-icons.css') }}">
+    <!-- <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css"> -->
+
+    <!-- Bootstrap + Rubic main styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/rubic.css') }}">
+	<!-- <link rel="stylesheet" href="assets/css/rubic.css"> -->
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav id="scrollspy" class="navbar page-navbar navbar-dark navbar-expand-md fixed-top" data-spy="affix" data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong class="text-primary">Left</strong><span class="text-light">Food</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link">{{ name }}</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="account">帳號管理</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="home">回首頁</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="header d-flex justify-content-center">
+      <div class="container text-center">
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          <h2 class="display-4 has-line">帳號管理</h6>
+          <div id="current_date">
+            <br/>  
+            <br/>
+            <br/>
+        
+        <form method="post" action="/management">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="circle-100 mb-3"><i class="ti-view-list"></i></a></div>
+                    <!-- <a href='#' name="role" value="manager"><h6 class="title mb-3">管理員</h6></a> -->
+                    <button name="role" value="manager" class="btn btn-dark">管理員</button> 
+                </div>
+                <div class="col-lg-4">
+                    <div class="circle-100 mb-3"><i class="ti-view-list"></i></a></div>
+                    <button name="role" value="seller" class="btn btn-dark">賣家</button>
+                </div>
+                <div class="col-lg-4">
+                    <div class="circle-100 mb-3"><i class="ti-view-list"></i></a></div>
+                    <button name="role" value="buyer" class="btn btn-dark">買家</button>
+                </div>
+            
+              <!-- <div class="col-lg-4">
+                  <div class="circle-100 mb-3"><a href='record'><i class="ti-marker-alt"></i></a></div>
+                  <a href='record'><h6 class="title mb-3">訂購紀錄</h6></a>
+                  
+              </div> -->
+            </div>
+        </form>
+      </div>
+    </header>
+</body>
+</html>

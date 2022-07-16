@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>Left Food</title>
+</head>
+
+<body>
+
+    <form method="post" action="/food_delete_info">
+        
+        {{ checkbox_content | safe }}
+
+        <button type="submit">刪除</button>
+    </form>
+    <button onclick ="location.href = 'food_data';" >取消</button>
+    
+</body>
+</html>
