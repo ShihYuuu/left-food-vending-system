@@ -8,19 +8,7 @@
 	* mysql.connector
 
 - File structure
-Left_food
-|
-|__ app.py: 主程式
-|
-|__ static: 放所有html所需的檔案
-|
-|__ templates: 所有的html檔 (使用者介面)
-|
-|__ project
-     |
-     |____ __init__.py: 初始化系統
-     |
-     |____ dbManager.py: 操作資料庫的指令集
+![image](https://user-images.githubusercontent.com/67854884/179342538-4b012f61-af04-415b-8535-59bdf63d5d34.png)
 
 - To implement system
   1. pip install all requirement
