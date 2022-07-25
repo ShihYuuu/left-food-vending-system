@@ -14,11 +14,11 @@ class DataBase():
 
     def connect(self):
         mydb = mysql.connector.connect(
-            host = "140.119.19.73",
-            user = "Pink",
-            password = "123456",
-            database = "Food",
-            port = 3315
+            host = "serverIP",
+            user = "username",
+            password = "password",
+            database = "dbname",
+            port = portnumber
         )
         return mydb
    
